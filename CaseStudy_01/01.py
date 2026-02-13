@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> afae32619b518d33fc13a0f5403ba2d0af379d0a
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
