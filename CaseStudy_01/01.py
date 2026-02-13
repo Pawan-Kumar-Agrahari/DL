@@ -1,10 +1,3 @@
-# Case Study: MNIST Dataset Classification using MLP
-# ---------------------------------------------------
-# Name: ___________
-# Roll No: ___________
-# Subject: Deep Learning / AI
-# Topic: MNIST Classification using MLP
-
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
