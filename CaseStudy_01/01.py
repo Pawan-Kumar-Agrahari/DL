@@ -90,11 +90,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# 7. Observations and Result Explanation (Mandatory)
+# 7. Observations and Result Explanation 
 
 print("\n---------------- OBSERVATIONS ----------------")
 print("1. The model achieved test accuracy of:", round(test_acc*100, 2), "%")
-print("2. Training accuracy increases with epochs, showing learning progress.")
-print("3. Validation accuracy also increases and remains close to training accuracy.")
-print("4. If validation loss starts increasing while training loss decreases, overfitting occurs.")
-print("5. Here, the model performs well and shows good generalization.")
