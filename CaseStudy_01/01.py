@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> afae32619b518d33fc13a0f5403ba2d0af379d0a
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# ---------------------------------------------------
-# 1. Dataset Handling (Mandatory)
-# ---------------------------------------------------
+
+# Dataset Handling 
 
 # Load MNIST dataset
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -26,9 +20,7 @@ x_test  = x_test.reshape(-1, 784) / 255.0
 print("Reshaped Shape of x_train:", x_train.shape)
 print("Reshaped Shape of x_test :", x_test.shape)
 
-# ---------------------------------------------------
-# 2. MLP Model Architecture (Mandatory)
-# ---------------------------------------------------
+# MLP Model Architecture 
 
 model = Sequential([
     Dense(128, activation='relu', input_shape=(784,)),   # Hidden Layer
@@ -39,9 +31,7 @@ model = Sequential([
 print("\nModel Summary:")
 model.summary()
 
-# ---------------------------------------------------
-# 3. Model Compilation (Mandatory)
-# ---------------------------------------------------
+# 3. Model Compilation 
 
 model.compile(
     optimizer='adam',
@@ -49,9 +39,7 @@ model.compile(
     metrics=['accuracy']
 )
 
-# ---------------------------------------------------
-# 4. Training the Model (Mandatory)
-# ---------------------------------------------------
+# 4. Training the Model 
 
 history = model.fit(
     x_train, y_train,
@@ -60,18 +48,15 @@ history = model.fit(
     validation_split=0.1
 )
 
-# ---------------------------------------------------
-# 5. Model Evaluation (Mandatory)
-# ---------------------------------------------------
+# 5. Model Evaluation 
 
 test_loss, test_acc = model.evaluate(x_test, y_test)
 
 print("\nTest Loss:", test_loss)
 print("Test Accuracy:", test_acc)
 
-# ---------------------------------------------------
-# 6. Visualization (Mandatory)
-# ---------------------------------------------------
+
+# 6. Visualization 
 
 # Plot 1: Training vs Validation Accuracy
 plt.figure(figsize=(8,5))
@@ -105,9 +90,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# ---------------------------------------------------
 # 7. Observations and Result Explanation (Mandatory)
-# ---------------------------------------------------
 
 print("\n---------------- OBSERVATIONS ----------------")
 print("1. The model achieved test accuracy of:", round(test_acc*100, 2), "%")
@@ -115,7 +98,3 @@ print("2. Training accuracy increases with epochs, showing learning progress.")
 print("3. Validation accuracy also increases and remains close to training accuracy.")
 print("4. If validation loss starts increasing while training loss decreases, overfitting occurs.")
 print("5. Here, the model performs well and shows good generalization.")
-
-# ---------------------------------------------------
-# END OF PROGRAM
-# ---------------------------------------------------
